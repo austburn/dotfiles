@@ -1,0 +1,18 @@
+[global_config]
+  focus = system
+  tab_position = "hidden"
+
+[keybindings]
+  full_screen = <Ctrl><Shift>F11
+
+[profiles]
+  [[default]]
+     show_titlebar = False
+     font = Fixed 10
+     background_color = "#37474F"
+     background_darkness = 0.75
+     background_type = transparent
+     foreground_color = "#FFFFFF"
+     scrollback_lines = '1000'
+     cursor_blink = True
+
