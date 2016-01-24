@@ -44,7 +44,9 @@ URxvt.color7: #cfd8dc
 URxvt.color15 : #eceff1
 
 URxvt.font:		xft:Hack:size=11
+URxvt.letterSpace: -1
 URxvt.scrollstyle:	plain
+
 ! URxvt*depth:                          number
 ! URxvt*visual:                         number
 ! URxvt*lineSpace:                      number
