@@ -1,36 +1,60 @@
-!baskerville - ivory dark
-*background:  #2D2C28
-*foreground:  #A4A6AB
+! URxvt*transparent:                    boolean
+! URxvt*tintColor:                      color
+! URxvt*shading:                        number
+! URxvt*fading:                         number
+! URxvt*fadeColor:                      color
 
+URxvt.depth: 		32
+URxvt.background: 	[45]#263238
+URxvt.transparent: 	true
+URxvt.shading: 		40
 
-! BLACK
-*color0:      #5B5955
-*color8:      #707277
+URxvt.perl-ext-common: 	default,clipboard
+URxvt.iso14755: 	False
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.cursorBlink: 	True
 
-! WHITE
-*color7:      #DBDDE2
-*color15:     #F7F9FF
+!URxvt.background 		: #263238
+URxvt.foreground: #eceff1
 
-! RED
-*color1:      #C4756E
-*color9:      #F6A299
+! black
+URxvt.color0: #263238
+URxvt.color8: #37474f
+! red
+ URxvt.color1: #ff9800
+URxvt.color9: #ffa74d
+! green
+URxvt.color2: #8bc34a
+URxvt.color10: #9ccc65
+! yellow
+URxvt.color3: #ffc107
+URxvt.color11: #ffa000
+! blue
+URxvt.color4: #03a9f4
+URxvt.color12: #81d4fa
+! magenta
+URxvt.color5: #e91e63
+URxvt.color13: #ad1457
+! cyan
+URxvt.color6: #009688
+URxvt.color14: #26a69a
+! white
+URxvt.color7: #cfd8dc
+URxvt.color15 : #eceff1
 
-! YELLOW
-*color3:      #9B8A4B
-*color11:     #CAB775
-
-! GREEN
-*color2:      #559A6A
-*color10:     #82C896
-
-! CYAN
-*color6:      #019BAA
-*color14:     #53CAD9
-
-! BLUE
-*color4:      #6A8DCA
-*color12:     #98BBFB
-
-! MAGENTA
-*color5:      #B577AC
-*color13:     #E5A4DB
+URxvt.font:		xft:Hack:size=11
+URxvt.scrollstyle:	plain
+! URxvt*depth:                          number
+! URxvt*visual:                         number
+! URxvt*lineSpace:                      number
+! URxvt*letterSpace:                    number
+! URxvt*backspacekey:                   string
+! URxvt*deletekey:                      string
+! URxvt*cutchars:                       string
+! URxvt*background.border:              boolean
+! URxvt*background.expr:                string
+! URxvt*background.interval:            seconds
+! URxvt*tabbar-bg:                      colour
+! URxvt*tabbar-fg:                      colour
+! URxvt*url-launcher:                   string
