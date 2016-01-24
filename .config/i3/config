@@ -34,7 +34,7 @@ bindsym $mod+Shift+s exec bash -c 'i3lock -i /home/austburn/pictures/mtn.png -t 
 
 exec --no-startup-id bash -c 'i3lock -i /home/austburn/pictures/mtn.png -t'
 # start a terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
