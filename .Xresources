@@ -5,9 +5,9 @@
 ! URxvt*fadeColor:                      color
 
 URxvt.depth: 		32
-URxvt.background: 	[45]#263238
+URxvt.background: 	[35]#263238
 URxvt.transparent: 	true
-URxvt.shading: 		40
+URxvt.shading: 		30
 
 URxvt.perl-ext-common: 	default,clipboard
 URxvt.iso14755: 	False
@@ -17,33 +17,43 @@ URxvt.clipboard.copycmd:  xsel -ib
 URxvt.clipboard.pastecmd: xsel -ob
 URxvt.cursorBlink: 	True
 
-!URxvt.background 		: #263238
-URxvt.foreground: #eceff1
+!!NumiX Darkest.
+!!BY WuX 
 
-! black
-URxvt.color0: #263238
-URxvt.color8: #37474f
-! red
- URxvt.color1: #ff9800
-URxvt.color9: #ffa74d
-! green
-URxvt.color2: #8bc34a
-URxvt.color10: #9ccc65
-! yellow
-URxvt.color3: #ffc107
-URxvt.color11: #ffa000
-! blue
-URxvt.color4: #03a9f4
-URxvt.color12: #81d4fa
-! magenta
-URxvt.color5: #e91e63
-URxvt.color13: #ad1457
-! cyan
-URxvt.color6: #009688
-URxvt.color14: #26a69a
-! white
-URxvt.color7: #cfd8dc
-URxvt.color15 : #eceff1
+!URxvt.background: #282828
+URxvt.foreground: #A2A2A2
+
+!Black
+URxvt.color0:    #555555
+URxvt.color8:    #888888
+
+!Red
+URxvt.color1:    #9C3528
+URxvt.color9:    #d64937
+
+!Green
+URxvt.color2:    #61BC3B
+URxvt.color10:   #86DF5D
+
+!yellow
+URxvt.color3:    #F3B43A
+URxvt.color11:   #FDD75A
+
+!blue
+URxvt.color4:    #0D68A8
+URxvt.color12:   #0F75BD
+
+!Magenta
+URxvt.color5:    #744560
+URxvt.color13:   #9E5E83
+
+!Cyan
+URxvt.color6:    #288e9c
+URxvt.color14:   #37c3d6
+
+!White
+URxvt.color7:    #A2A2A2
+URxvt.color15:   #f9f9f9
 
 URxvt.font:		xft:System San Francisco Default Regular:size=11
 URxvt.letterSpace: 	-3
