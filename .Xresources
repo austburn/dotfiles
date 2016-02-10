@@ -1,13 +1,9 @@
-! URxvt*transparent:                    boolean
-! URxvt*tintColor:                      color
-! URxvt*shading:                        number
-! URxvt*fading:                         number
-! URxvt*fadeColor:                      color
-
-URxvt.depth: 		32
-URxvt.background: 	[35]#263238
-URxvt.transparent: 	true
-URxvt.shading: 		30
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
 
 URxvt.perl-ext-common: 	default,clipboard
 URxvt.iso14755: 	False
@@ -17,10 +13,19 @@ URxvt.clipboard.copycmd:  xsel -ib
 URxvt.clipboard.pastecmd: xsel -ob
 URxvt.cursorBlink: 	True
 
+URxvt.transparent: True
+URxvt.shading: 25
+URxvt.fading: 30
+
+URxvt.thickness: 1
+URxvt.scrollBar: off
+
+URxvt.borderLess: False
+
 !!NumiX Darkest.
 !!BY WuX 
 
-!URxvt.background: #282828
+URxvt.background: #282828
 URxvt.foreground: #A2A2A2
 
 !Black
@@ -58,17 +63,3 @@ URxvt.color15:   #f9f9f9
 URxvt.font:		xft:System San Francisco Default Regular:size=11
 URxvt.letterSpace: 	-3
 URxvt.scrollstyle:	plain
-
-! URxvt*depth:                          number
-! URxvt*visual:                         number
-! URxvt*lineSpace:                      number
-! URxvt*letterSpace:                    number
-! URxvt*backspacekey:                   string
-! URxvt*deletekey:                      string
-! URxvt*cutchars:                       string
-! URxvt*background.border:              boolean
-! URxvt*background.expr:                string
-! URxvt*background.interval:            seconds
-! URxvt*tabbar-bg:                      colour
-! URxvt*tabbar-fg:                      colour
-! URxvt*url-launcher:                   string
