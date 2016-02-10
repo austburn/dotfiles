@@ -14,6 +14,7 @@ documents/*
 .config/spotify/*
 .config/sublime-text-3/*
 .esd_auth
+.gimp-2.8/*
 .gnome/*
 .gnupg/*
 .histfile
@@ -28,12 +29,14 @@ documents/*
 .pki/*
 .python_history
 .ssh/*
+.thumbnails
 .wheelhouses/*
 .vim/.netrwhist
 .viminfo
 .virtualenvs/*
 .wine-pipelight/*
 .Xauthority
+.xsel*
 .zcompdump*
 .zsh_history
 .zshrc.pre-oh-my-zsh

@@ -13,6 +13,8 @@ URxvt.perl-ext-common: 	default,clipboard
 URxvt.iso14755: 	False
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.clipboard.copycmd:  xsel -ib
+URxvt.clipboard.pastecmd: xsel -ob
 URxvt.cursorBlink: 	True
 
 !URxvt.background 		: #263238
@@ -43,8 +45,8 @@ URxvt.color14: #26a69a
 URxvt.color7: #cfd8dc
 URxvt.color15 : #eceff1
 
-URxvt.font:		xft:Hack:size=11
-URxvt.letterSpace: -1
+URxvt.font:		xft:System San Francisco Default Regular:size=11
+URxvt.letterSpace: 	-3
 URxvt.scrollstyle:	plain
 
 ! URxvt*depth:                          number
