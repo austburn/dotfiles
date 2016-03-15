@@ -22,8 +22,8 @@ set $inactive_bg_color #686b70
 set $urgent            #556680
 set $bar_bg_color      #dddee3
 set $active_ws         #b9c5d3
-set $dmenu_bg          #239DC4
-set $dmenu_select      #156274
+set $dmenu_bg          #b9c5d3
+set $dmenu_select      #686b70
 
 set $bg_photo "/home/austburn/pictures/forest.png"
 
