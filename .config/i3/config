@@ -189,6 +189,7 @@ client.unfocused          $inactive_bg_color $inactive_bg_color $text_color  #FF
 client.focused_inactive   $inactive_bg_color $inactive_bg_color $text_color  #FFFFFF
 client.urgent             $urgent            $urgent            $text_color  #FFFFFF
 
+new_window 1pixel
 hide_edge_borders both
 
 exec compton --config /home/austburn/.config/compton.conf
