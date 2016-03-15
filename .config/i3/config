@@ -16,22 +16,24 @@ set $mod Mod4
 font pango:System San Francisco Display, FontAwesome 11
 
 # Colors
-set $bg_color          #0D95AF
-set $text_color        #F3F4F5
-set $inactive_bg_color #186577
+set $bg_color          #dddee3
+set $text_color        #7a898c
+set $inactive_bg_color #686b70
 set $urgent            #556680
-set $bar_bg_color      #125464
-set $active_ws         #6AB3C2
+set $bar_bg_color      #dddee3
+set $active_ws         #b9c5d3
 set $dmenu_bg          #239DC4
 set $dmenu_select      #156274
+
+set $bg_photo "/home/austburn/pictures/forest.png"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # Suspend
-bindsym $mod+Shift+s exec bash -c 'i3lock -i /home/austburn/pictures/fw.png -t && sudo pm-suspend'
+bindsym $mod+Shift+s exec bash -c 'i3lock -i $bg_photo -t && sudo pm-suspend'
 
-exec --no-startup-id bash -c 'i3lock -i /home/austburn/pictures/fw.png -t'
+exec --no-startup-id bash -c 'i3lock -i $bg_photo -t'
 # start a terminal
 bindsym $mod+Return exec urxvt
 
@@ -47,7 +49,7 @@ bindsym $mod+d exec dmenu_run -z -l 3 -fn "System San Francisco Display Regular-
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+l exec i3lock -i /home/austburn/pictures/fw.png -t
+bindsym $mod+l exec i3lock -i $bg_photo -t
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -153,6 +155,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
         tray_output primary
+	position top
 	colors {
 		background $bar_bg_color
 		statusline $text_color
@@ -189,10 +192,11 @@ client.urgent             $urgent            $urgent            $text_color  #FF
 hide_edge_borders both
 
 exec compton --config /home/austburn/.config/compton.conf
-exec_always --no-startup-id feh --bg-scale /home/austburn/pictures/fw.png
+exec_always --no-startup-id feh --bg-scale $bg_photo
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset 'Master' 5%+ unmute #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset 'Master' 5%- unmute #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id amixer sset 'Master' toggle # mute sound
-
+bindsym XF86MonBrightnessUp exec --no-startup-id tee /sys/class/backlight/intel_backlight/brightness <<< expr $(cat /sys/class/backlight/intel_backlight/brightness) + 100
+bindsym XF86MonBrightnessDown exec --no-startup-id tee /sys/class/backlight/intel_backlight/brightness <<< expr $(cat /sys/class/backlight/intel_backlight/brightness) - 100
 

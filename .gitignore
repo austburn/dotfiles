@@ -22,6 +22,7 @@ documents/*
 .lesshst
 .local/*
 .mozilla/*
+.mysql_history
 .npm/*
 .node_repl_history
 .oh-my-zsh/*
