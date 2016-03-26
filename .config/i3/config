@@ -193,6 +193,7 @@ new_window 1pixel
 hide_edge_borders both
 
 exec compton --config /home/austburn/.config/compton.conf
+exec ~/.screenlayout.sh
 exec_always --no-startup-id feh --bg-scale $bg_photo
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset 'Master' 5%+ unmute #increase sound volume

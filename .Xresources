@@ -5,14 +5,14 @@ Xft.hinting: true
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcddefault
 
-URxvt.perl-ext-common: 	default,clipboard
-URxvt.iso14755: 	False
-URxvt.keysym.Shift-Control-C: perl:clipboard:copy
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.clipboard.copycmd:  xsel -ib
-URxvt.clipboard.pastecmd: xsel -ob
-URxvt.cursorBlink: 	True
+URxvt.clipboard.copycmd:  xsel --input  --clipboard
+URxvt.clipboard.pastecmd: xsel --output --clipboard
+URxvt.keysym.Control-Shift-C: perl:clipboard:copy
+URxvt.keysym.Control-Shift-v: perl:clipboard:paste
+URxvt.perl-ext-common: default,clipboard
+URxvt.iso14755: False
 
+URxvt.cursorBlink: True
 URxvt.transparent: True
 URxvt.shading: 25
 URxvt.fading: 30
