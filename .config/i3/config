@@ -33,6 +33,7 @@ floating_modifier $mod
 # Suspend
 bindsym $mod+Shift+s exec bash -c 'i3lock -i $bg_photo -t && sudo pm-suspend'
 
+exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id bash -c 'i3lock -i $bg_photo -t'
 # start a terminal
 bindsym $mod+Return exec urxvt
@@ -196,9 +197,9 @@ exec compton --config /home/austburn/.config/compton.conf
 exec ~/.screenlayout.sh
 exec_always --no-startup-id feh --bg-scale $bg_photo
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset 'Master' 5%+ unmute #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset 'Master' 5%- unmute #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id amixer sset 'Master' toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id ponymix increase 5 #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 5 #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id ponymix toggle # mute sound
 bindsym XF86MonBrightnessUp exec --no-startup-id tee /sys/class/backlight/intel_backlight/brightness <<< expr $(cat /sys/class/backlight/intel_backlight/brightness) + 100
 bindsym XF86MonBrightnessDown exec --no-startup-id tee /sys/class/backlight/intel_backlight/brightness <<< expr $(cat /sys/class/backlight/intel_backlight/brightness) - 100
 

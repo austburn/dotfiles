@@ -1,1 +1,27 @@
-/home/austburn/.asoundrc.hdmi
+# ALSA library configuration file
+
+# Include settings that are under the control of asoundconf(1).
+# (To disable these settings, comment out this line.)
+</var/lib/alsa/asound.state>
+#</home/austburn/.asoundrc.asoundconf>
+
+#pcm.!default {
+#    type hw
+#    card PCH
+#    device 0
+#}
+
+#ctl.!default {
+#    type hw
+#    card PCH
+#    device 0
+#}
+
+pcm.!default {
+    type pulse
+}
+
+ctl.!default {
+    type pulse
+}
+
