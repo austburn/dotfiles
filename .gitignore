@@ -8,6 +8,7 @@ documents/*
 .config/chromium/*
 .config/google-chrome/*
 .config/dconf/*
+.config/gtk-2.0/gtkfilechooser.ini
 .config/htop/*
 .config/menus/*
 .config/pulse/*
