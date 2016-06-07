@@ -15,6 +15,7 @@ documents/*
 .config/spotify/*
 .config/sublime-text-3/*
 .esd_auth
+.fehbg
 .gimp-2.8/*
 .gnome/*
 .gnupg/*
