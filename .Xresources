@@ -28,30 +28,34 @@ URxvt.background:       #3C3B37
 URxvt.foreground:       #93a1a1
 
 !black
-URxvt.color0:  #5F5F5F
-URxvt.color8:  #828282
+*color0:  #5F5F5F
+*color8:  #828282
 !red
-URxvt.color1:  #d96468
-URxvt.color9:  #d98f93
+*color1:  #d96468
+*color9:  #d98f93
 !green
-URxvt.color2:  #a2d964
-URxvt.color10: #b8d98f
+*color2:  #a2d964
+*color10: #b8d98f
 !yellow
-URxvt.color3:  #d9c964
-URxvt.color11: #d9cf8f
-!blue 
-URxvt.color4:  #64a2d9
-URxvt.color12: #8f99d9
+*color3:  #d9c964
+*color11: #d9cf8f
+!blue
+*color4:  #64a2d9
+*color12: #8f99d9
 !magenta
-URxvt.color5:  #9a64d9
-URxvt.color13: #b08fd9
+*color5:  #9a64d9
+*color13: #b08fd9
 !cyan
-URxvt.color6:  #64d9d5
-URxvt.color14: #8fd9d5
+*color6:  #64d9d5
+*color14: #8fd9d5
 !white
-URxvt.color7:  #989898
-URxvt.color15: #C5C5C5
+*color7:  #989898
+*color15: #C5C5C5
 
 URxvt.font:		xft:gohufont:size=11
 URxvt.letterSpace: 	1
 URxvt.scrollstyle:	plain
+URxvt.keysym.Control-Up:    \033[1;5A
+URxvt.keysym.Control-Down:  \033[1;5B
+URxvt.keysym.Control-Left:  \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C

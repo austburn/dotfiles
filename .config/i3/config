@@ -15,15 +15,33 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:System San Francisco Display, FontAwesome 11
 
+#X colors
+set_from_resource $darkred     color1  #000000
+set_from_resource $red         color9  #000000
+set_from_resource $darkgreen   color2  #000000
+set_from_resource $green       color10 #000000
+set_from_resource $darkyellow  color3  #000000
+set_from_resource $yellow      color11 #000000
+set_from_resource $darkblue    color4  #000000
+set_from_resource $blue        color12 #000000
+set_from_resource $darkmagenta color5  #000000
+set_from_resource $magenta     color13 #000000
+set_from_resource $darkcyan    color6  #000000
+set_from_resource $cyan        color14 #000000
+set_from_resource $darkwhite   color7  #000000
+set_from_resource $white       color15 #000000
+set_from_resource $black       color0  #000000
+set_from_resource $darkblack   color8  #000000
+
 # Colors
 set $bg_color          #2b3f40
-set $text_color        #dddee3
 set $inactive_bg_color #686b70
 set $urgent            #722721
 set $bar_bg_color      #2b3f40
 set $active_ws         #1a2322
 set $dmenu_bg          #2b3f40
 set $dmenu_select      #686b70
+set $transparent       #00000000
 
 set $bg_photo "/home/austburn/pictures/coffee.png"
 
@@ -42,7 +60,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -z -l 3 -fn "gohufont-14" -nb "$dmenu_bg" -nf "$text_color" -sb "$dmenu_select" -y 540 -w 960 -x 480 
+bindsym $mod+d exec dmenu_run -z -l 3 -fn "gohufont-14" -nb "$dmenu_bg" -nf "$white" -sb "$dmenu_select" -y 540 -w 960 -x 480
 
 # change focus
 bindsym $mod+l exec i3lock -i $bg_photo -t
@@ -85,40 +103,23 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $home   "Home "
-set $chrome "Chrome "
-set $code   "Sublime "
-set $four   "IV"
-set $five   "V"
-set $six    "VI"
-set $seven  "VII"
-set $eight  "VIII"
-set $nine   "IX"
-set $ten    "X"
+set $home    "1:  "
+set $term    "2:  "
+set $chrome  "3:  "
+set $code    "4:  "
+set $spotify "5:  "
 
 # switch to workspace
-bindsym $mod+1 workspace $home
+bindsym $mod+1 workspace $term
 bindsym $mod+2 workspace $chrome
 bindsym $mod+3 workspace $code
-bindsym $mod+4 workspace $four
-bindsym $mod+5 workspace $five
-bindsym $mod+6 workspace $six
-bindsym $mod+7 workspace $seven
-bindsym $mod+8 workspace $eight
-bindsym $mod+9 workspace $nine
-bindsym $mod+0 workspace $ten
+bindsym $mod+4 workspace $spotify
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $home
+bindsym $mod+Shift+1 move container to workspace $term
 bindsym $mod+Shift+2 move container to workspace $chrome
 bindsym $mod+Shift+3 move container to workspace $code
-bindsym $mod+Shift+4 move container to workspace $four
-bindsym $mod+Shift+5 move container to workspace $five
-bindsym $mod+Shift+6 move container to workspace $six
-bindsym $mod+Shift+7 move container to workspace $seven
-bindsym $mod+Shift+8 move container to workspace $eight
-bindsym $mod+Shift+9 move container to workspace $nine
-bindsym $mod+Shift+0 move container to workspace $ten
+bindsym $mod+Shift+4 move container to workspace $spotify
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -157,30 +158,29 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
+	i3bar_command i3bar -t
         tray_output primary
-	position top
+	height 24
+        position top
+        strip_workspace_numbers yes
 	colors {
-		background $bar_bg_color
-		statusline $text_color
-		separator  $text_color
-		#                  border        background    text
-		focused_workspace  $active_ws    $active_ws    $text_color
-		active_workspace   $active_ws    $active_ws    $text_color
-		inactive_workspace $bg_color     $bg_color     $text_color
+		background $transparent
+		statusline $black
+		separator  $white
+		#                  border          background      text
+		focused_workspace  $transparent    $transparent    $black
+		active_workspace   $transparent    $transparent    $darkblack
+		inactive_workspace $transparent    $transparent    $darkblack
+        	urgent_workspace   $darkred        $darkred        $transparent
+	        binding_mode       $darkred        $darkred        $transparent
 	}
 }
 
 # Workspace mgmt
-workspace $home output eDP1
+workspace $spotify output eDP1
+workspace $term output HDMI1
 workspace $chrome output HDMI1
-workspace $code output eDP1
-workspace 4 output eDP1
-workspace 5 output eDP1
-workspace 6 output HDMI1
-workspace 7 output HDMI1
-workspace 8 output HDMI1
-workspace 9 output HDMI1
-workspace 10 output HDMI1
+workspace $code output HDMI1
 
 bindsym $mod+Shift+h exec "i3-msg move workspace to output HDMI1"
 bindsym $mod+Shift+e exec "i3-msg move workspace to output eDP1"
@@ -194,6 +194,11 @@ client.urgent             $urgent            $urgent            $text_color  #FF
 
 new_window 1pixel
 hide_edge_borders both
+
+assign [class="chromium"]                         $chrome
+assign [class="sublime_text"]                     $code
+assign [class="urxvt"]			          $term
+assign [class="spotify"]                                 $spotify
 
 exec /usr/local/bin/hdmi_sound_toggle.sh
 exec compton --config /home/austburn/.config/compton.conf
