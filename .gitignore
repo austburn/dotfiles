@@ -4,6 +4,7 @@ Downloads/*
 documents/*
 .aws/*
 .asoundrc.asoundconf
+.babel.json
 .cache/*
 .config/chromium/*
 .config/google-chrome/*
@@ -34,7 +35,7 @@ documents/*
 .ssh/*
 .thumbnails
 .wheelhouses/*
-.vim/.netrwhist
+.vim
 .viminfo
 .virtualenvs/*
 .wine-pipelight/*
