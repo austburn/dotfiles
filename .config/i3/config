@@ -192,13 +192,17 @@ client.unfocused          $inactive_bg_color $inactive_bg_color $text_color  #FF
 client.focused_inactive   $inactive_bg_color $inactive_bg_color $text_color  #FFFFFF
 client.urgent             $urgent            $urgent            $text_color  #FFFFFF
 
-new_window 1pixel
+for_window [class="^.*"] border pixel 0
+new_window none
 hide_edge_borders both
 
-assign [class="chromium"]                         $chrome
+assign [class="(?i)chromium"]                         $chrome
 assign [class="sublime_text"]                     $code
 assign [class="urxvt"]			          $term
-assign [class="spotify"]                                 $spotify
+assign [class="spotify"]                          $spotify
+
+gaps inner 5
+gaps outer 5
 
 exec /usr/local/bin/hdmi_sound_toggle.sh
 exec compton --config /home/austburn/.config/compton.conf

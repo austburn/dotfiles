@@ -45,3 +45,5 @@ documents/*
 .zsh_history
 .zshrc.pre-oh-my-zsh
 .zsh-update
+.config/Trolltech.conf
+.config/vlc
