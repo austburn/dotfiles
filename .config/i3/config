@@ -51,8 +51,6 @@ floating_modifier $mod
 # Suspend
 bindsym $mod+Shift+s exec bash -c 'i3lock -i $bg_photo -t && sudo pm-suspend'
 
-exec --no-startup-id start-pulseaudio-x11
-exec --no-startup-id bash -c 'i3lock -i $bg_photo -t'
 # start a terminal
 bindsym $mod+Return exec urxvt
 
@@ -126,7 +124,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+x exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -208,6 +206,10 @@ exec /usr/local/bin/hdmi_sound_toggle.sh
 exec compton --config /home/austburn/.config/compton.conf
 exec ~/.screenlayout.sh
 exec_always --no-startup-id feh --bg-scale $bg_photo
+exec --no-startup-id start-pulseaudio-x11
+exec --no-startup-id bash -c 'i3lock -i $bg_photo -t'
+
+exec --no-startup-id i3-msg 'workspace $term; exec urxvt'
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id ponymix increase 5 #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id ponymix decrease 5 #decrease sound volume
