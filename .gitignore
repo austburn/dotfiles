@@ -15,6 +15,8 @@ documents/*
 .config/pulse/*
 .config/spotify/*
 .config/sublime-text-3/*
+.config/Thunar/*
+.config/xfce4/*
 .esd_auth
 .fehbg
 .gimp-2.8/*
@@ -22,6 +24,7 @@ documents/*
 .gnupg/*
 .histfile
 .icons/*
+.lastpass/*
 .lesshst
 .local/*
 .mozilla/*
@@ -47,3 +50,4 @@ documents/*
 .zsh-update
 .config/Trolltech.conf
 .config/vlc
+.wpa_cli_history
