@@ -103,19 +103,19 @@ bindsym $mod+a focus parent
 
 set $home    "1:  "
 set $term    "2:  "
-set $chrome  "3:  "
+set $firefox "3:  "
 set $code    "4:  "
 set $spotify "5:  "
 
 # switch to workspace
 bindsym $mod+1 workspace $term
-bindsym $mod+2 workspace $chrome
+bindsym $mod+2 workspace $firefox
 bindsym $mod+3 workspace $code
 bindsym $mod+4 workspace $spotify
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $term
-bindsym $mod+Shift+2 move container to workspace $chrome
+bindsym $mod+Shift+2 move container to workspace $firefox
 bindsym $mod+Shift+3 move container to workspace $code
 bindsym $mod+Shift+4 move container to workspace $spotify
 
@@ -177,7 +177,7 @@ bar {
 # Workspace mgmt
 workspace $spotify output eDP1
 workspace $term output HDMI1
-workspace $chrome output HDMI1
+workspace $firefox output HDMI1
 workspace $code output HDMI1
 
 bindsym $mod+Shift+h exec "i3-msg move workspace to output HDMI1"
@@ -194,7 +194,7 @@ for_window [class="^.*"] border pixel 0
 new_window none
 hide_edge_borders both
 
-assign [class="(?i)chromium"]                         $chrome
+assign [class="firefox"]                          $firefox
 assign [class="sublime_text"]                     $code
 assign [class="urxvt"]			          $term
 assign [class="spotify"]                          $spotify
