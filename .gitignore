@@ -7,11 +7,13 @@ documents/*
 .babel.json
 .cache/*
 .config/chromium/*
+.config/gconf/*
 .config/google-chrome/*
 .config/dconf/*
 .config/gtk-2.0/gtkfilechooser.ini
 .config/htop/*
 .config/menus/*
+.config/mimeapps.list
 .config/pulse/*
 .config/spotify/*
 .config/sublime-text-3/*
