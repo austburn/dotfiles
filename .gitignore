@@ -2,6 +2,7 @@ pictures/*
 projects/*
 Downloads/*
 documents/*
+.ansible/*
 .aws/*
 .asoundrc.asoundconf
 .babel.json
