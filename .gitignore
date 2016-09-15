@@ -1,8 +1,10 @@
+Arduino/*
 pictures/*
 projects/*
 Downloads/*
 documents/*
 .ansible/*
+.arduino15/*
 .aws/*
 .asoundrc.asoundconf
 .babel.json
@@ -27,6 +29,7 @@ documents/*
 .gnupg/*
 .histfile
 .icons/*
+.java/*
 .lastpass/*
 .lesshst
 .local/*
@@ -35,6 +38,7 @@ documents/*
 .npm/*
 .node_repl_history
 .oh-my-zsh/*
+.oracle_jre_usage/*
 .pip_bootstrap_profile.sh
 .pki/*
 .python_history
