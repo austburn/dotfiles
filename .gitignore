@@ -16,9 +16,11 @@ documents
 .config/dconf
 .config/gtk-2.0/gtkfilechooser.ini
 .config/htop
+.config/keepassx
 .config/menus
 .config/mimeapps.list
 .config/pulse
+.config/QtProject.conf
 .config/spotify
 .config/sublime-text-3
 .config/Thunar
