@@ -24,7 +24,7 @@ my $short_text;
 my $bat_number = $ENV{BLOCK_INSTANCE} || 0;
 
 # read the first line of the "acpi" command output
-open (ACPI, "acpi -b | grep -v Unknown | grep 'Battery $bat_number' |") or die;
+open (ACPI, "acpi -b | grep -vE 'Full|Unknown' | grep 'Battery [01]' |") or die;
 $acpi = <ACPI>;
 close(ACPI);
 
