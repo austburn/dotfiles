@@ -6,4 +6,4 @@ if [[ -z $SINK ]]; then
 	echo "";
 fi
 
-echo " $(pactl list sinks | grep "Sink #1" -A10 | tail -2 | grep -Eo "[0-9]{1,2}\%" | head -1)"
+echo " $(pactl list sinks | grep "Sink #$SINK" -A10 | tail -2 | grep -Eo "[0-9]{1,2}\%" | head -1)"
