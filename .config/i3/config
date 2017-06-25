@@ -103,21 +103,23 @@ bindsym $mod+a focus parent
 
 set $home    "1:  "
 set $term    "2:  "
-set $firefox "3:  "
+set $browser "3:  "
 set $code    "4:  "
 set $spotify "5:  "
 
 # switch to workspace
-bindsym $mod+1 workspace $term
-bindsym $mod+2 workspace $firefox
-bindsym $mod+3 workspace $code
-bindsym $mod+4 workspace $spotify
+bindsym $mod+1 workspace $home
+bindsym $mod+2 workspace $term
+bindsym $mod+3 workspace $browser
+bindsym $mod+4 workspace $code
+bindsym $mod+5 workspace $spotify
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $term
-bindsym $mod+Shift+2 move container to workspace $firefox
-bindsym $mod+Shift+3 move container to workspace $code
-bindsym $mod+Shift+4 move container to workspace $spotify
+bindsym $mod+Shift+1 move container to workspace $home
+bindsym $mod+Shift+2 move container to workspace $term
+bindsym $mod+Shift+3 move container to workspace $browser
+bindsym $mod+Shift+4 move container to workspace $code
+bindsym $mod+Shift+5 move container to workspace $spotify
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -155,30 +157,31 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
+    status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
 	i3bar_command i3bar -t
-        tray_output primary
+    tray_output primary
 	height 24
-        position top
-        strip_workspace_numbers yes
+    position top
+    strip_workspace_numbers yes
 	colors {
-		background $transparent
-		statusline $black
-		separator  $white
-		#                  border          background      text
-		focused_workspace  $transparent    $transparent    $black
-		active_workspace   $transparent    $transparent    $darkblack
-		inactive_workspace $transparent    $transparent    $darkblack
-        	urgent_workspace   $darkred        $darkred        $transparent
-	        binding_mode       $darkred        $darkred        $transparent
+        background $transparent
+        statusline $black
+        separator  $white
+        #                  border          background      text
+        focused_workspace  $transparent    $transparent    $black
+        active_workspace   $transparent    $transparent    $darkblack
+        inactive_workspace $transparent    $transparent    $darkblack
+        urgent_workspace   $darkred        $darkred        $transparent
+        binding_mode       $darkred        $darkred        $transparent
 	}
 }
 
 # Workspace mgmt
+workspace $home    output eDP1
 workspace $spotify output eDP1
-workspace $term output HDMI1
-workspace $firefox output HDMI1
-workspace $code output HDMI1
+workspace $term    output HDMI1
+workspace $browser output HDMI1
+workspace $code    output HDMI1
 
 bindsym $mod+Shift+h exec "i3-msg move workspace to output HDMI1"
 bindsym $mod+Shift+e exec "i3-msg move workspace to output eDP1"
@@ -194,10 +197,11 @@ for_window [class="^.*"] border pixel 0
 new_window none
 hide_edge_borders both
 
-assign [class="firefox"]                          $firefox
-assign [class="sublime_text"]                     $code
-assign [class="urxvt"]			          $term
-assign [class="spotify"]                          $spotify
+assign [class="firefox"]        $browser
+assign [class="google-chrome"]  $browser
+assign [class="sublime_text"]   $code
+assign [class="urxvt"]          $term
+assign [class="spotify"]        $spotify
 
 gaps inner 5
 gaps outer 5
