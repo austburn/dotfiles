@@ -71,4 +71,9 @@ VirtualBox VMs
 .zsh_history
 .zshrc.pre-oh-my-zsh
 .zsh-update
-
+.config/Code
+.config/baloofilerc
+.config/dolphinrc
+.config/gocode
+.vscode
+go
