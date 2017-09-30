@@ -88,6 +88,7 @@ autoload -Uz compinit
 export GREP_COLORS="fn=1;96:ms=1;93"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export GOPATH=/home/austburn/go
 
 # StartX
 [[ -z $DISPLAY && XDG_VTNR -eq 1 ]] && exec startx
